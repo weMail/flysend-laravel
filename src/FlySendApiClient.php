@@ -30,7 +30,7 @@ class FlySendApiClient
     public function sendEmail(array $payload): array
     {
         try {
-            $response = $this->http->post('/api/emails', [
+            $response = $this->http->post('/emails', [
                 'headers' => [
                     'Authorization' => 'Bearer '.$this->apiKey,
                     'Content-Type' => 'application/json',
