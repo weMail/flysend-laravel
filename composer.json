@@ -1,0 +1,48 @@
+{
+    "name": "flysend/flysend-laravel",
+    "description": "FlySend email driver for Laravel.",
+    "keywords": ["laravel", "email", "flysend", "mail", "mailer"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FlySend",
+            "email": "support@flysend.io"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/mail": "^10.0|^11.0|^12.0",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "symfony/mailer": "^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FlySend\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FlySend\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FlySend\\Laravel\\FlySendServiceProvider"
+            ],
+            "aliases": {
+                "FlySend": "FlySend\\Laravel\\Facades\\FlySend"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
